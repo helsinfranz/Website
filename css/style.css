@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Css variable */
 
 :root {
@@ -20,7 +24,7 @@
 /* Logo and images */
 
 #logo {
-    margin: 5px 5px;
+    margin: 5px 31px;
 }
 
 #logo img {
@@ -31,21 +35,62 @@
 /* listing navigation */
 
 #navbar {
-    position: relative;
-    background-color: #222;
+    background-color: transparent;
+    position: sticky;
+    top: 0px;
+    z-index: 0;
 }
 
 #navbar::before {
     content: "";
-    background-color: #222;
+    background-color: transparent;
     position: absolute;
     height: 100%;
     width: 100%;
-    z-index: -1;
     opacity: 0.8;
+    z-index: -1;
 }
 
-#navbar ul {
+#navbar .buttons {
+    margin-left: 1100px;
+}
+
+#navbar .buttons .Login_button,
+.Signup_button {
+    font-size: 16px;
+    font-family: 'Rowdies';
+    background-color: #01d676;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+#navbar .buttons .Signup_button {
+    border-color: #01d676;
+
+}
+
+#navbar .buttons .Signup_button:hover {
+    background-color: #28e18e;
+    transition-duration: 0.6s;
+    cursor: pointer;
+}
+
+#navbar .buttons .Login_button {
+    background-color: transparent;
+    color: #f5f5f5;
+    border-color: #f5f5f5;
+    margin-right: 10px;
+}
+
+#navbar .buttons .Login_button:hover {
+    background-color: #f5f5f5;
+    color: #222;
+    transition-duration: 0.6s;
+    cursor: pointer;
+}
+
+
+/* #navbar ul {
     display: flex;
 }
 
@@ -66,7 +111,7 @@
 #navbar ul li a:hover {
     color: white;
     background-color: blueviolet;
-}
+} */
 
 /* earn_details section */
 
@@ -74,12 +119,14 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-image: url('../images/Earn details/ipads.png'),url('../images/Earn details/macbook.png');
+    background-image: url('../images/Earn details/ipads.png'), url('../images/Earn details/macbook.png');
     background-repeat: no-repeat;
-    background-position: left,right;
-    background-size: 461px ;
+    background-position: left, right;
+    background-size: 461px;
     background-color: #222;
-    padding-bottom: 22px;
+    padding-bottom: 284px;
+    margin-top: -130px;
+    padding-top: 140px;
 }
 
 /* #earn-details .ipad,.macbook{
@@ -114,7 +161,6 @@
     position: relative;
     border-radius: 6px;
     font-weight: 100;
-    z-index: 2;
     margin-top: 55px;
 }
 
@@ -131,6 +177,7 @@
     align-items: center;
     flex-direction: column;
     background-color: #222;
+    margin-top: -130px;
 }
 
 #earn_how .h-primary {
@@ -192,7 +239,6 @@
     position: relative;
     border-radius: 6px;
     font-weight: 100;
-    z-index: 2;
     margin-top: 55px;
     margin-bottom: 55px;
 }
@@ -301,9 +347,11 @@ footer .center {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 50px;
     padding-bottom: 20px;
     font-family: 'Rowdies';
     color: #555555;
+    margin-bottom: -146px;
 }
 
 /* footer section */
@@ -318,16 +366,20 @@ footer div div div ul {
 
 footer div div div ul li a {
     text-decoration: none;
-    font-size: small;
+    font-size: 14px;
     font-family: 'Rowdies';
     color: #777777;
 }
 
 footer div div div,
 footer div div {
-    font-size: medium;
+    font-size: 16px;
     font-family: 'Rowdies';
     color: #555555;
+}
+
+footer div div div ul {
+    padding-top: 8px;
 }
 
 footer div div .support,
@@ -353,4 +405,160 @@ footer div div .social {
 footer #footer_section .align_footer {
     display: flex;
     flex-direction: row;
+}
+
+footer #footer_section .languages .langdropdown {
+    flex-direction: column;
+}
+
+/* footer #footer_section .languages .langdropdown .dropdownitems {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+footer #footer_section .languages .langdropdown .dropdownitems a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+footer #footer_section .languages .langdropdown .dropdownitems a:hover {
+    background-color: #f1f1f1
+}
+footer #footer_section .languages .langdropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+footer #footer_section .languages .langdropdown:hover .dropdownitems {
+    background-color: #3e8e41;
+} */
+
+
+footer #footer_section .languages .langdropdown .dropbtn {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-family: 'Rowdies';
+    color: #777777;
+    padding-top: 8px;
+}
+
+footer #footer_section .languages .langdropdown .dropbtn img {
+    margin-right: auto;
+}
+
+#smartnav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+    margin-top: -40px;
+    position: sticky;
+    top: 0px;
+    bottom: 0px;
+    background-color: transparent;
+}
+
+#smartnav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+#smartnav #stand img {
+    width: 377px;
+    height: 78px;
+}
+
+#smartnav ul li a img {
+    width: 35px;
+    margin-bottom: -48px;
+    z-index: 2;
+    position: sticky;
+    margin-left: 8px;
+}
+
+#smartnav ul .Earn a .earnbefore {
+    transition: 0.3s ease-in-out;
+}
+
+#smartnav ul .Earn a .earnbefore:hover {
+    content: url(../images/icons/cash-stack.svg);
+    transform: rotate(-30deg) scale(1.5);
+    margin-right: 10px;
+    margin-bottom: -35px;
+}
+
+#smartnav ul .Cashout a img {
+    transition: 0.3s ease-in-out;
+}
+
+#smartnav ul .Cashout a img:hover {
+    content: url(../images/icons/piggy-bank-fill.svg);
+    transform: rotate(-20deg) scale(1.5);
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: -35px;
+}
+
+#smartnav ul .Reward a img {
+    transition: 0.3s ease-in-out;
+}
+
+#smartnav ul .Reward a img:hover {
+    content: url(../images/icons/currency-exchange.svg);
+    transform: rotate(-10deg) scale(1.5);
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: -35px;
+}
+
+#smartnav ul .Home a img {
+    transition: 0.3s ease-in-out;
+}
+
+#smartnav ul .Home a img:hover {
+    content: url(../images/icons/house-fill.svg);
+    transform: rotate(0deg) scale(1.5);
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: -35px;
+}
+
+#smartnav ul .Profile a img {
+    transition: 0.3s ease-in-out;
+}
+
+#smartnav ul .Profile a img:hover {
+    content: url(../images/icons/person-fill.svg);
+    transform: rotate(10deg) scale(1.5);
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: -35px;
+}
+
+#smartnav ul .Settings a img {
+    transition: 0.3s ease-in-out;
+}
+
+#smartnav ul .Settings a img:hover {
+    content: url(../images/icons/gear-fill.svg);
+    transform: rotate(20deg) scale(1.5);
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: -35px;
+}
+
+#smartnav ul .Support a img {
+    transition: 0.3s ease-in-out;
+}
+
+#smartnav ul .Support a img:hover {
+    content: url(../images/icons/headset_fill.png);
+    transform: rotate(30deg) scale(1.5);
+    margin-left: 10px;
+    margin-bottom: -35px;
 }
