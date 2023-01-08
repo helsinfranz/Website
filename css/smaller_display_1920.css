@@ -1,0 +1,29 @@
+
+
+/* navbar top */
+
+#navbar .buttons {
+    margin-left: auto;
+}
+
+/* footer options */
+
+footer div div .social {
+    margin-left: 36%;
+    margin-top: 2%;
+}
+footer div div .about {
+    margin-left: 8%;
+    margin-top: 2%;
+}
+footer div div .support {
+    margin-left: 17%;
+    margin-top: 2%;
+}
+footer div .languages{
+    margin-left: 17%;
+    margin-top: -2%;
+}
+footer div #logo_footer img {
+    margin: -2% 14%;
+}

@@ -52,7 +52,7 @@ html {
 }
 
 #navbar .buttons {
-    margin-left: 1100px;
+    margin-left: 73%;
 }
 
 #navbar .buttons .Login_button,
@@ -257,6 +257,7 @@ html {
     flex-direction: column;
     background-color: #222;
     padding-bottom: 71px;
+    margin-top: -2px;
 }
 
 #about_us .h-primary {
@@ -357,7 +358,8 @@ footer .center {
 /* footer section */
 
 footer #footer_section {
-    margin-bottom: 75px;
+    margin-bottom: 72px;
+    margin-top: -8px;
 }
 
 footer div div div ul {
@@ -561,4 +563,8 @@ footer #footer_section .languages .langdropdown .dropbtn img {
     transform: rotate(30deg) scale(1.5);
     margin-left: 10px;
     margin-bottom: -35px;
+}
+
+#phone_nav{
+    display: none;
 }
