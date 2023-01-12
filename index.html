@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rowdies&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <script src="https://apis.google.com/js/api:client.js"></script> -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
     </style>
@@ -32,15 +34,107 @@
             <li class="items"><a href="#">Reward</a></li>
         </ul> -->
         <div class="buttons">
-            <button type="button" class="Login_button">Login</button>
-            <button type="button" class="Signup_button">Sign-up</button>
+            <button type="button" onclick="loginshow()" class="Login_button">Login</button>
+            <button type="button" onclick="signupshow()" class="Signup_button">Sign up</button>
         </div>
     </nav>
+    <div class="loginpopup" style="display: none;">
+        <div class="cross_button">
+            <button type="button" class="logcross" onclick="loginhide()"><img src="../website/images/icons/x-circle.svg"
+                    alt="cross"></button>
+        </div>
+        <form>
+            <div id="mail">
+                <label for="email">Email Address</label><br>
+                <div class="mail_field">
+                    <img class="envelope" src="../website/images/icons/envelope.svg" alt="">
+                    <input type="text" id="email_login" onfocus="focus_mail()" onblur="blur_mail()"
+                        placeholder="Username@gmail.com"><br>
+                </div>
+            </div>
+            <div id="pass">
+                <label for="email">Password</label><br>
+                <div class="pass_field">
+                    <img class="lock" src="../website/images/icons/lock.svg" alt="">
+                    <input type="password" onfocus="focus_pass()" onblur="blur_pass()" id="password_login"
+                        placeholder=" ··············"><br>
+                    <button type="button" class="eye_button" onclick="visibilitycheck()">
+                        <img id="eye" src="../website/images/icons/eye.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <button type="button" class="login_on_popup" onclick="login()">
+                <p id="name1"></p><img id="login_img" src="../website/images/icons/login-rounded.png" alt="">
+            </button>
+            <button type="button" class="login_from_google" onclick="login_google()">
+                <p id="name2"></p><img id="google_img" src="../website/images/icons/google.svg" alt="">
+            </button>
+        </form>
+        <ul>
+            <a href="#!" onclick="Create_Account()">
+                <li>Create an account</li>
+            </a>
+            <a href="#!!">
+                <li>Forgot your password?</li>
+            </a>
+        </ul>
+    </div>
+    <div class="signuppopup" style="display: none;">
+        <div class="cross_button">
+            <button type="button" class="signcross" onclick="signuphide()"><img
+                    src="../website/images/icons/x-circle.svg" alt="cross"></button>
+        </div>
+        <form>
+            <div id="smail">
+                <label for="email">Email Address</label><br>
+                <div class="mail_field">
+                    <img class="envelope" src="../website/images/icons/envelope.svg" alt="">
+                    <input type="text" id="email_sign" onfocus="sfocus_mail()" onblur="sblur_mail()"
+                        placeholder="username@gmail.com"><br>
+                </div>
+            </div>
+            <div id="user">
+                <label for="user">Username</label><br>
+                <div class="user_field">
+                    <img class="username_img" src="../website/images/icons/username-icon.svg" alt="">
+                    <input type="text" id="user_sign" onfocus="focus_user()" onblur="blur_user()" placeholder="dummyuser"><br>
+                </div>
+            </div>
+            <div id="spass">
+                <label for="email">Password</label><br>
+                <div class="pass_field">
+                    <img class="lock" src="../website/images/icons/lock.svg" alt="">
+                    <input type="password" onfocus="sfocus_pass()" onblur="sblur_pass()" id="password_sign"
+                        placeholder=" ··············"><br>
+                    <button type="button" class="eye_button" onclick="svisibilitycheck()">
+                        <img id="seye" src="../website/images/icons/eye.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div id="cpass">
+                <label for="email">Confirm Password</label><br>
+                <div class="pass_field">
+                    <img class="lock" src="../website/images/icons/lock.svg" alt="">
+                    <input type="password" onfocus="cfocus_pass()" onblur="cblur_pass()" id="password_sign_confirm"
+                        placeholder=" ··············"><br>
+                    <button type="button" class="eye_button" onclick="cvisibilitycheck()">
+                        <img id="ceye" src="../website/images/icons/eye.svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <button type="button" class="sign_on_popup" onclick="signup()">
+                <p id="sname1"></p><img id="sign_img" src="../website/images/icons/sign-up.png" alt="">
+            </button>
+            <button type="button" class="sign_from_google" onclick="sign_google()">
+                <p id="sname2"></p><img id="sgoogle_img" src="../website/images/icons/google.svg" alt="">
+            </button>
+        </form>
+    </div>
     <section id="earn_details">
         <h1 class="h-primary">You can earn from</h1>
         <p>Surveys, Playing Games, Testing Apps & Website, etc</p>
         <p>Earn upto $25 per offer</p>
-        <button class="btn">Start Earning</button>
+        <button type="button" class="btn">Start Earning</button>
     </section>
     <section id="earn_how">
         <h1 class="h-primary">How to start earning?</h1>
@@ -50,7 +144,7 @@
             <div class="box"><img src="images/section 2/step2.png" alt="step 2"></div>
         </div>
         <div class="box3"><img src="images/section 2/step3.png" alt="step 3"></div>
-        <button class="btn">Start Earning</button>
+        <button type="button" class="btn">Start Earning</button>
     </section>
     <section id="about_us">
         <h1 class="h-primary">We provide many features to our earners</h1>
@@ -124,7 +218,7 @@
             <div class="languages">
                 Language
                 <div class="langdropdown">
-                    <button class="dropbtn">
+                    <button type="button" class="dropbtn">
                         English
                         <img src="images/icons/caret-down.svg" alt="down">
                     </button>
@@ -205,6 +299,11 @@
             Support
         </a>
     </div>
+    <script type="text/javascript" src="../website/scripts/password_visibility.js"></script>
+    <script type="text/javascript" src="../website/scripts/popupdisplay.js"></script>
+    <script type="text/javascript" src="../website/scripts/focus_field.js"></script>
+    <script type="text/javascript" src="../website/scripts/button_movement.js"></script>
+    <script type="text/javascript" src="../website/scripts/button_movement_sign.js"></script>
 </body>
 
 </html>
