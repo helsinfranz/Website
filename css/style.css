@@ -8,6 +8,18 @@ html {
     scroll-behavior: smooth;
 }
 
+/* .nowblur {
+    transition: 0.2s;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    margin: -3px;
+} */
+
+.inputShadow{
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.4s;
+}
+
 /* Css variable */
 
 :root {
@@ -38,7 +50,7 @@ html {
     background-color: transparent;
     position: sticky;
     top: 0px;
-    z-index: 0;
+    z-index: 1;
 }
 
 #navbar::before {
@@ -87,6 +99,411 @@ html {
     color: #222;
     transition-duration: 0.6s;
     cursor: pointer;
+}
+
+.loginpopup {
+    position: sticky;
+    box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 0.24), 12px 12px 12px 12px rgba(0, 0, 0, 0.24);
+    top: 16%;
+    left: 33%;
+    /* background: transparent; */
+    border-radius: 12px;
+    width: 500px;
+    height: 540px;
+    margin-left: -500px;
+    margin-top: -540px;
+    z-index: 200;
+    backdrop-filter: blur(30px);
+    /* background: url('../images/login/login_1.jpeg'); */
+    /* backdrop-filter: blur(10px); */
+    /* background-repeat: no-repeat; */
+    /* background-position: center; */
+    /* background-size: 500px; */
+    /* background-color: #222; */
+    /* overflow: none;
+    transition: none;
+    -webkit-filter: none;
+    filter: none; */
+}
+
+.loginpopup ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding-left: 60px;
+    gap: 126px;
+    margin-top: 38px;
+}
+.loginpopup ul a{
+    font-size: small;
+    text-decoration: none;
+    color: white;
+    font-family: 'Rowdies';
+}
+
+/* .loginpopup .background{
+    margin: 100%;
+    background-color: transparent;
+    z-index: -1;
+} */
+
+.loginpopup .cross_button {
+    text-align: right;
+}
+
+.loginpopup .cross_button .logcross {
+    background: transparent;
+    border: none;
+}
+
+.loginpopup .cross_button .logcross img {
+    width: 20px;
+    transition: 0.5s;
+    margin: 12px;
+}
+
+.loginpopup .cross_button .logcross img:hover {
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.loginpopup form {
+    text-align: center;
+    font-family: 'Rowdies';
+    font-size: small;
+    color: white;
+}
+
+.loginpopup form div {
+    text-align: left;
+    /* background-color: */
+    backdrop-filter: blur(1px);
+    /* border: #222; */
+    margin-left: 90px;
+    margin-right: 90px;
+    border-radius: 10px;
+    margin-top: 27px;
+    padding: 5px;
+    padding-top: 12px;
+}
+
+.loginpopup form .login_on_popup {
+    margin-top: 50px;
+    background-color: #28e18e;
+    border: thin solid #444;
+    color: white;
+    /* border: none; */
+    padding: 15px;
+    padding-left: 138px;
+    padding-right: 138px;
+    border-radius: 25px;
+    font-family: 'Rowdies';
+    font-size: medium;
+    display: inline-flex;
+}
+
+.loginpopup form .login_on_popup:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.loginpopup form .login_from_google {
+    margin-top: 5px;
+    /*
+    background-color: #28e18e;
+    border: thin solid #444;
+    color: white;
+    /* border: none; */
+    padding: 15px;
+    padding-left: 138px;
+    padding-right: 138px;
+    /* border-radius: 25px; */
+    font-family: 'Rowdies';
+    font-size: medium;
+    /* display: inline-block; */
+    background: white;
+    color: #444;
+    /* width: 190px;   */
+    border-radius: 25px;
+    border: thin solid #444;
+    white-space: nowrap;
+    display: inline-flex;
+}
+
+.loginpopup form .login_from_google:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.loginpopup form .login_from_google img{
+    width: 25px;
+}
+
+/* .loginpopup form .login_from_google img:hover{
+    transition: transform 0.5s ease;
+    transform: translateX(120px);
+} */
+
+.loginpopup form button .changed_image{
+    transition: transform 0.5s ease;
+    transform: translateX(120px);
+}
+
+.loginpopup form .login_on_popup img{
+    width: 25px;
+}
+
+.loginpopup form .login_on_popup:hover {
+    cursor: pointer;
+}
+
+.loginpopup form div label {
+    padding: 12px;
+}
+
+/* .loginpopup form div{
+    display: flex;
+    flex-direction: row;
+} */
+
+.loginpopup form div div input {
+    color: whitesmoke;
+    font-size: medium;
+    font-weight: 700;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    background: transparent;
+    border: none;
+    padding: 2px;
+    outline: black;
+}
+
+.loginpopup form div div {
+    display: flex;
+    flex-direction: row;
+    margin-left: 8px;
+    margin-top: -10px;
+    gap: 10px;
+    border: none;
+}
+
+.loginpopup form div div .eye_button {
+    border: none;
+    background-color: transparent;
+}
+
+/* .signuppopup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    width: 500px;
+    height: 500px;
+    margin-left: -250px;
+    /*Half the value of width to center div*/
+    /* margin-top: -250px; */
+    /*Half the value of height to center div*/
+    /* z-index: 200; */
+/* } */
+.signuppopup {
+    position: sticky;
+    box-shadow: 12px 12px 12px 12px rgba(0, 0, 0, 0.24), 12px 12px 12px 12px rgba(0, 0, 0, 0.24);
+    top: 7%;
+    left: 33%;
+    /* background: transparent; */
+    border-radius: 12px;
+    width: 500px;
+    height: 700px;
+    margin-left: -500px;
+    margin-top: -699px;
+    z-index: 200;
+    backdrop-filter: blur(30px);
+    /* background: url('../images/login/login_1.jpeg'); */
+    /* backdrop-filter: blur(10px); */
+    /* background-repeat: no-repeat;
+    background-position: center;
+    background-size: 500px; */
+    /* background-color: #222; */
+    /* overflow: none;
+    transition: none;
+    -webkit-filter: none;
+    filter: none; */
+}
+
+/* .signuppopup ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding-left: 60px;
+    gap: 126px;
+    margin-top: 18px;
+}
+.signuppopup ul a{
+    font-size: small;
+    text-decoration: none;
+    color: white;
+    font-family: 'Rowdies';
+} */
+
+/* .signuppopup .background{
+    margin: 100%;
+    background-color: transparent;
+    z-index: -1;
+} */
+
+.signuppopup .cross_button {
+    text-align: right;
+}
+
+.signuppopup form #user div .username_img{
+    width: 18px;
+}
+
+.signuppopup .cross_button .signcross {
+    background: transparent;
+    border: none;
+}
+
+.signuppopup .cross_button .signcross img {
+    width: 20px;
+    transition: 0.5s;
+    margin: 12px;
+}
+
+.signuppopup .cross_button .signcross img:hover {
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.signuppopup form {
+    text-align: center;
+    font-family: 'Rowdies';
+    font-size: small;
+    color: white;
+}
+
+.signuppopup form div {
+    text-align: left;
+    /* background-color: */
+    backdrop-filter: blur(1px);
+    /* border: #222; */
+    margin-left: 90px;
+    margin-right: 90px;
+    border-radius: 10px;
+    margin-top: 27px;
+    padding: 5px;
+    padding-top: 12px;
+}
+
+.signuppopup form .sign_on_popup {
+    margin-top: 50px;
+    background-color: #2884e1;
+    border: thin solid #444;
+    color: white;
+    /* border: none; */
+    padding: 15px;
+    padding-left: 138px;
+    padding-right: 138px;
+    border-radius: 25px;
+    font-family: 'Rowdies';
+    font-size: medium;
+    display: inline-flex;
+}
+
+.signuppopup form .sign_on_popup:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.signuppopup form .sign_from_google {
+    margin-top: 5px;
+    /*
+    background-color: #28e18e;
+    border: thin solid #444;
+    color: white;
+    /* border: none; */
+    padding: 15px;
+    padding-left: 138px;
+    padding-right: 138px;
+    /* border-radius: 25px; */
+    font-family: 'Rowdies';
+    font-size: medium;
+    /* display: inline-block; */
+    background: white;
+    color: #444;
+    /* width: 190px;   */
+    border-radius: 25px;
+    border: thin solid #444;
+    white-space: nowrap;
+    display: inline-flex;
+}
+
+.signuppopup form .sign_from_google:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.signuppopup form .sign_from_google img{
+    width: 25px;
+}
+
+/* .signuppopup form .login_from_google img:hover{
+    transition: transform 0.5s ease;
+    transform: translateX(120px);
+} */
+
+.signuppopup form button .changed_image{
+    transition: transform 0.5s ease;
+    transform: translateX(120px);
+}
+
+.signuppopup form .sign_on_popup img{
+    width: 25px;
+}
+
+.signuppopup form .sign_on_popup:hover {
+    cursor: pointer;
+}
+
+.signuppopup form div label {
+    padding: 12px;
+}
+
+/* .signuppopup form div{
+    display: flex;
+    flex-direction: row;
+} */
+
+.signuppopup form div div input {
+    color: whitesmoke;
+    font-size: medium;
+    font-weight: 700;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    background: transparent;
+    border: none;
+    padding: 2px;
+    outline: black;
+}
+
+.signuppopup form div div {
+    display: flex;
+    flex-direction: row;
+    margin-left: 8px;
+    margin-top: -10px;
+    gap: 10px;
+    border: none;
+}
+
+.signuppopup form div div .eye_button {
+    border: none;
+    background-color: transparent;
 }
 
 
@@ -565,6 +982,6 @@ footer #footer_section .languages .langdropdown .dropbtn img {
     margin-bottom: -35px;
 }
 
-#phone_nav{
+#phone_nav {
     display: none;
 }
